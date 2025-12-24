@@ -13,7 +13,7 @@ export function BackgroundImage({
   return (
     <div
       className={clsx(
-        'absolute inset-0 overflow-hidden bg-indigo-50',
+        'absolute inset-0 overflow-hidden bg-slate-900',
         className,
       )}
     >
@@ -32,8 +32,8 @@ export function BackgroundImage({
         priority
         unoptimized
       />
-      <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-white" />
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-white" />
+      <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-slate-900" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-slate-900" />
     </div>
   )
 }

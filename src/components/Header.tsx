@@ -5,12 +5,12 @@ import { Logo } from '@/components/Logo'
 
 export function Header() {
   return (
-    <header className="relative z-50 flex-none lg:pt-11">
+    <header className="relative z-50 flex-none lg:pt-11 bg-slate-900">
       <Container className="flex flex-wrap items-center justify-center sm:justify-between lg:flex-nowrap">
         <div className="mt-10 lg:mt-0 lg:grow lg:basis-0">
-          <Logo className="h-12 w-auto text-slate-900" />
+          <Logo className="h-12 w-auto text-white" />
         </div>
-        <div className="order-first -mx-4 flex flex-auto basis-full overflow-x-auto border-b border-blue-600/10 py-4 font-mono text-sm whitespace-nowrap text-blue-600 sm:-mx-6 lg:order-0 lg:mx-0 lg:basis-auto lg:border-0 lg:py-0">
+        <div className="order-first -mx-4 flex flex-auto basis-full overflow-x-auto border-b border-yellow-400/20 py-4 font-mono text-sm whitespace-nowrap text-yellow-400 sm:-mx-6 lg:order-0 lg:mx-0 lg:basis-auto lg:border-0 lg:py-0">
           <div className="mx-auto flex items-center gap-4 px-4">
             <p>
               <time dateTime="2025-12-25">25</time>-

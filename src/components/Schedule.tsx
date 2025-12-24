@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { BackgroundImage } from '@/components/BackgroundImage'
 import { Container } from '@/components/Container'
 
 interface Day {
@@ -248,7 +247,7 @@ function ScheduleTabbed() {
                   day={{
                     ...day,
                     date: (
-                      <Tab className="data-selected:not-data-focus:outline-hidden">
+                      <Tab className="data-selected:not-data-focus:outline-hidden text-white data-selected:text-yellow-400">
                         <span className="absolute inset-0" />
                         {day.date}
                       </Tab>
@@ -277,10 +276,10 @@ function ScheduleTabbed() {
 function DaySummary({ day }: { day: Day }) {
   return (
     <>
-      <h3 className="text-2xl font-semibold tracking-tight text-blue-900">
+      <h3 className="text-2xl font-semibold tracking-tight text-white">
         <time dateTime={day.dateTime}>{day.date}</time>
       </h3>
-      <p className="mt-1.5 text-base tracking-tight text-blue-900">
+      <p className="mt-1.5 text-base tracking-tight text-slate-300">
         {day.summary}
       </p>
     </>
@@ -293,7 +292,7 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
       role="list"
       className={clsx(
         className,
-        'space-y-8 bg-white/60 px-10 py-14 text-center shadow-xl shadow-blue-900/5 backdrop-blur-sm',
+        'space-y-8 bg-slate-800/60 px-10 py-14 text-center shadow-xl shadow-slate-900/5 backdrop-blur-sm border border-slate-700',
       )}
     >
       {day.timeSlots.map((timeSlot, timeSlotIndex) => (
@@ -302,25 +301,34 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
           aria-label={`${timeSlot.name} talking about ${timeSlot.description} at ${timeSlot.start} - ${timeSlot.end} GMT`}
         >
           {timeSlotIndex > 0 && (
-            <div className="mx-auto mb-8 h-px w-48 bg-indigo-500/10" />
+            <div className="mx-auto mb-8 h-px w-48 bg-yellow-400/20" />
           )}
-          <h4 className="text-lg font-semibold tracking-tight text-blue-900">
+          <h4 className="text-lg font-semibold tracking-tight text-white">
             {timeSlot.name}
           </h4>
           {timeSlot.description && (
-            <p className="mt-1 tracking-tight text-blue-900">
+            <p className="mt-1 tracking-tight text-white">
               {timeSlot.description}
             </p>
           )}
-          <p className="mt-1 font-mono text-sm text-slate-500">
-            <time dateTime={`${day.dateTime}T${timeSlot.start}-08:00`}>
+          {timeSlot.arabicDesc && (
+            <p className="mt-2 text-base tracking-tight text-yellow-400 font-medium" dir="rtl">
+              {timeSlot.arabicDesc}
+            </p>
+          )}
+          <p className="mt-1 font-mono text-sm text-slate-300">
+            <time dateTime={`${day.dateTime}T${timeSlot.start}+00:00`}>
               {timeSlot.start}
             </time>{' '}
-            -{' '}
-            <time dateTime={`${day.dateTime}T${timeSlot.end}-08:00`}>
-              {timeSlot.end}
-            </time>{' '}
-            PST
+            {timeSlot.end && (
+              <>
+                -{' '}
+                <time dateTime={`${day.dateTime}T${timeSlot.end}+00:00`}>
+                  {timeSlot.end}
+                </time>{' '}
+              </>
+            )}
+            GMT
           </p>
         </li>
       ))}
@@ -343,23 +351,19 @@ function ScheduleStatic() {
 
 export function Schedule() {
   return (
-    <section id="schedule" aria-label="Schedule" className="py-20 sm:py-32">
+    <section id="schedule" aria-label="Schedule" className="py-20 sm:py-32 bg-slate-900">
       <Container className="relative z-10">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
-          <h2 className="font-display text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl">
-            Our three day schedule is jam-packed with brilliant, creative, evil
-            geniuses.
+          <h2 className="font-display text-4xl font-medium tracking-tighter text-white sm:text-5xl">
+            Conference Schedule
           </h2>
-          <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
-            The worst people in our industry giving the best talks you’ve ever
-            seen. Nothing will be recorded and every attendee has to sign an NDA
-            to watch the talks.
+          <p className="mt-4 font-display text-2xl tracking-tight text-white">
+            Join us for four days of insightful sessions on Tawheed and its importance in our daily lives.
           </p>
         </div>
       </Container>
       <div className="relative mt-14 sm:mt-24">
-        <BackgroundImage position="right" className="-top-40 -bottom-32" />
-        <Container className="relative">
+        <Container className="relative z-10">
           <ScheduleTabbed />
           <ScheduleStatic />
         </Container>

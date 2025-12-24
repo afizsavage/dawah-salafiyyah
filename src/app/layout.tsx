@@ -35,12 +35,12 @@ export default function RootLayout({
     <html
       lang="en"
       className={clsx(
-        'h-full bg-white antialiased',
+        'h-full bg-slate-900 antialiased',
         inter.variable,
         dmSans.variable,
       )}
     >
-      <body className="flex min-h-full">
+      <body className="flex min-h-full bg-slate-900">
         <div className="flex w-full flex-col">{children}</div>
       </body>
     </html>
