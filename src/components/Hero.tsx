@@ -14,14 +14,19 @@ export function Hero() {
               The Importance of Tawheed in a Person's Life
             </p>
           </div>
-          <Button
-            href="https://us06web.zoom.us/j/5715126510?pwd=XIbYgr4ZDnCR1JFFDeOHRSUKVAWi1R.1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-10 w-full sm:hidden"
-          >
-            Attend Remotely
-          </Button>
+          <div className="mt-10 flex flex-col sm:hidden">
+            <Button
+              href="https://us06web.zoom.us/j/5715126510?pwd=XIbYgr4ZDnCR1JFFDeOHRSUKVAWi1R.1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full"
+            >
+              Attend Remotely
+            </Button>
+            <p className="mt-2 text-sm text-slate-400 text-center">
+              Passcode: Salafiyyah
+            </p>
+          </div>
           <dl className="mt-10 grid grid-cols-1 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
               ['Speakers', '7'],

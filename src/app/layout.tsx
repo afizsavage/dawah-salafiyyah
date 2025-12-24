@@ -19,18 +19,35 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Da‘wah Salafiyyah Sierra Leone',
-    default: 'Da‘wah Salafiyyah Sierra Leone - 7th Annual Conference',
+    template: '%s - Da\'wah Salafiyyah Sierra Leone',
+    default: 'Da\'wah Salafiyyah Sierra Leone - 7th Annual Conference',
   },
   description:
-    'The Importance of Tawheed in a Person’s Life',
+    'The Importance of Tawheed in a Person\'s Life',
+  icons: {
+    icon: '/tio_logo.jpeg',
+  },
   openGraph: {
-    title: 'Da‘wah Salafiyyah Sierra Leone',
-    description: 'Da‘wah Salafiyyah Sierra Leone - 7th Annual Conference',
+    title: 'Da\'wah Salafiyyah Sierra Leone - 7th Annual Conference',
+    description: 'The Importance of Tawheed in a Person\'s Life',
     url: 'https://dawah-salafiyyah.vercel.app/',
-    siteName: 'Da‘wah Salafiyyah Sierra Leone',
+    siteName: 'Da\'wah Salafiyyah Sierra Leone',
     type: 'website',
-  }
+    images: [
+      {
+        url: '/tio_logo.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'Tawheed Islamic Organization Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Da\'wah Salafiyyah Sierra Leone - 7th Annual Conference',
+    description: 'The Importance of Tawheed in a Person\'s Life',
+    images: ['/tio_logo.jpeg'],
+  },
 }
 
 export default function RootLayout({

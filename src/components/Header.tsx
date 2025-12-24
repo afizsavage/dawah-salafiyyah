@@ -1,12 +1,14 @@
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { DiamondIcon } from '@/components/DiamondIcon'
+import { Logo } from '@/components/Logo'
 
 export function Header() {
   return (
     <header className="relative z-50 flex-none lg:pt-11 bg-slate-900">
-      <Container className="flex flex-wrap items-center justify-center sm:justify-between lg:flex-nowrap">
+      <Container className="flex flex-wrap items-center  justify-start sm:justify-between lg:flex-nowrap">
         <div className="mt-10 lg:mt-0 lg:grow lg:basis-0">
+          <Logo className="h-14 sm:h-16 w-auto" />
         </div>
         <div className="order-first -mx-4 flex flex-auto basis-full overflow-x-auto border-b border-yellow-400/20 py-4 font-mono text-sm whitespace-nowrap text-yellow-400 sm:-mx-6 lg:order-0 lg:mx-0 lg:basis-auto lg:border-0 lg:py-0">
           <div className="mx-auto flex items-center gap-4 px-4">
@@ -18,13 +20,16 @@ export function Header() {
             <p>Freetown, SL</p>
           </div>
         </div>
-        <div className="hidden sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
+        <div className="hidden sm:mt-10 sm:flex sm:flex-col sm:items-center sm:gap-2 lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
           <Button
             href="https://us06web.zoom.us/j/5715126510?pwd=XIbYgr4ZDnCR1JFFDeOHRSUKVAWi1R.1"
             target="_blank"
             rel="noopener noreferrer">
             Attend Remotely
           </Button>
+          <p className="text-sm text-slate-400">
+            Passcode: Salafiyyah
+          </p>
         </div>
       </Container>
     </header>
