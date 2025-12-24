@@ -24,6 +24,13 @@ export const metadata: Metadata = {
   },
   description:
     'The Importance of Tawheed in a Person’s Life',
+  openGraph: {
+    title: 'Da‘wah Salafiyyah Sierra Leone',
+    description: 'Da‘wah Salafiyyah Sierra Leone - 7th Annual Conference',
+    url: 'https://dawah-salafiyyah.vercel.app/',
+    siteName: 'Da‘wah Salafiyyah Sierra Leone',
+    type: 'website',
+  }
 }
 
 export default function RootLayout({
