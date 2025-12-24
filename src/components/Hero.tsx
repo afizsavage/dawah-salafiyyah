@@ -14,10 +14,15 @@ export function Hero() {
               The Importance of Tawheed in a Person's Life
             </p>
           </div>
-          <Button href="#" className="mt-10 w-full sm:hidden">
-            Get your tickets
+          <Button
+            href="https://us06web.zoom.us/j/5715126510?pwd=XIbYgr4ZDnCR1JFFDeOHRSUKVAWi1R.1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-10 w-full sm:hidden"
+          >
+            Attend Remotely
           </Button>
-          <dl className="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
+          <dl className="mt-10 grid grid-cols-1 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
               ['Speakers', '7'],
               ['Venue', 'Masjid Nurul Islam'],
