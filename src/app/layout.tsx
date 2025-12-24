@@ -19,11 +19,11 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - DeceptiConf',
-    default: 'DeceptiConf - A community-driven design conference',
+    template: '%s - Da‘wah Salafiyyah Sierra Leone',
+    default: 'Da‘wah Salafiyyah Sierra Leone - 7th Annual Conference',
   },
   description:
-    'At DeceptiConf you’ll learn about the latest dark patterns being developed to trick even the smartest visitors, and you’ll learn how to deploy them without ever being detected.',
+    'The Importance of Tawheed in a Person’s Life',
 }
 
 export default function RootLayout({
