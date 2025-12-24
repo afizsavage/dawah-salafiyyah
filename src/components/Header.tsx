@@ -21,7 +21,12 @@ export function Header() {
           </div>
         </div>
         <div className="hidden sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
-          <Button href="#">Attend Remotely</Button>
+          <Button
+            href="https://us06web.zoom.us/j/5715126510?pwd=XIbYgr4ZDnCR1JFFDeOHRSUKVAWi1R.1"
+            target="_blank"
+            rel="noopener noreferrer">
+            Attend Remotely
+          </Button>
         </div>
       </Container>
     </header>
