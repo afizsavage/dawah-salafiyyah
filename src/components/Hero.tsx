@@ -3,7 +3,7 @@ import { Container } from '@/components/Container'
 
 export function Hero() {
   return (
-    <div className="relative py-20 sm:pt-36 sm:pb-24 bg-slate-900">
+    <div className="relative py-20 pt-14 sm:pt-36 sm:pb-24 bg-slate-900">
       <Container className="relative z-10">
         <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
           <h1 className="font-display text-5xl font-bold tracking-tighter text-white sm:text-7xl">
