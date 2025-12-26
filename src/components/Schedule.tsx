@@ -211,6 +211,8 @@ const schedule: Array<Day> = [
 
 function ScheduleTabbed() {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
+  const [selectedIndex, setSelectedIndex] = useState(1) // 👈 default to index 1
+
 
   useEffect(() => {
     let smMediaQuery = window.matchMedia('(min-width: 640px)')
@@ -231,9 +233,10 @@ function ScheduleTabbed() {
     <TabGroup
       className="mx-auto grid max-w-2xl grid-cols-1 gap-y-6 sm:grid-cols-2 lg:hidden"
       vertical={tabOrientation === 'vertical'}
+      selectedIndex={selectedIndex} onChange={setSelectedIndex}
     >
       <TabList className="-mx-4 flex gap-x-4 gap-y-10 overflow-x-auto pb-4 pl-4 sm:mx-0 sm:flex-col sm:pr-8 sm:pb-0 sm:pl-0">
-        {({ selectedIndex }) => (
+        {() => (
           <>
             {schedule.map((day, dayIndex) => (
               <div

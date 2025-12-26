@@ -85,6 +85,7 @@ const days = [
 
 export function Speakers() {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
+  const [selectedIndex, setselectedIndex] = useState(1)
 
   useEffect(() => {
     let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
@@ -126,10 +127,10 @@ export function Speakers() {
           <div className="relative -mx-4 flex overflow-x-auto pb-4 sm:mx-0 sm:block sm:overflow-visible sm:pb-0">
             <div className="absolute top-2 bottom-0 left-0.5 hidden w-px bg-slate-600 lg:block" />
             <TabList className="grid auto-cols-auto grid-flow-col justify-start gap-x-8 gap-y-10 px-4 whitespace-nowrap sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
-              {({ selectedIndex }) => (
+              {() => (
                 <>
                   {days.map((day, dayIndex) => (
-                    <div key={day.dateTime} className="relative lg:pl-8">
+                    <div key={day.dateTime} className="relative lg:pl-8" onClick={() => setselectedIndex(dayIndex)}>
                       <DiamondIcon
                         className={clsx(
                           'absolute top-2.25 left-[-0.5px] hidden h-1.5 w-1.5 overflow-visible lg:block',
