@@ -211,7 +211,7 @@ const schedule: Array<Day> = [
 
 function ScheduleTabbed() {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
-  const [selectedIndex, setSelectedIndex] = useState(1) // 👈 default to index 1
+  const [selectedIndex, setSelectedIndex] = useState(2) // 👈 default to index 1
 
 
   useEffect(() => {
