@@ -85,7 +85,7 @@ const days = [
 
 export function Speakers() {
   let [tabOrientation, setTabOrientation] = useState('horizontal')
-  const [selectedIndex, setselectedIndex] = useState(2)
+  const [selectedIndex, setselectedIndex] = useState(3)
 
   useEffect(() => {
     let lgMediaQuery = window.matchMedia('(min-width: 1024px)')
